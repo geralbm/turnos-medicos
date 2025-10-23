@@ -57,6 +57,11 @@ const ingresarDatos = (nomb, apellido, email, datosPacNoti) => {
     
 }
 /********************************************************************/
+const mostrarDatos = (nomb, apellido, email) => {
+    alert ("Los datos ingresados son: " + "Nombre: "+ nomb + " - " + "Apellido: " + apellido + " - " + "Email: " + email);
+}
+
+/********************************************************************/
 
 //Inicio del Programa Principal
 
@@ -81,9 +86,10 @@ if (confNotiTurno){
     
     if (datosOk){
         datosPacNoti = ingresarDatos(nomPac, apePac, emailPac, datosPacNoti);
-        console.log (datosPacNoti);
+        mostrarDatos (nomPac, apePac, emailPac);
     }else {
         alert ("Los datos ingresados no son correctos");
+        mostrarDatos (nomPac, apePac, emailPac);
     }
     
     console.log (alert ("Muchas gracias por completar sus datos."));
